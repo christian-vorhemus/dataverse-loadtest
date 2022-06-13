@@ -10,22 +10,22 @@ This repository contains a Python script which can used for loading a Dataverse 
 
 # Usage
 Add "--help" to get more information about arguments, for example
-```
-python dataverse_loadtest.py create dataversetable --help
+```console
+user@com:~$ python dataverse_loadtest.py create dataversetable --help
 ```
 returns additional information on how to create new Dataverse tables.
 
 ## Create a table in Dataverse
 Replace the placeholders below with your data ("orgcd1abe55" is the Dynamics instance you must adopt to your needs, "cr876_" is the schema prefix used for the table and all columns) and run the script the following command:
 
-```
-python dataverse_loadtest.py create dataversetable -t <AAD tenant> -i <AAD Client ID> -p <AAD Client secret> -o "orgcd1abe55" -s "cr876_" -n <Table Name>
+```console
+user@com:~$ python dataverse_loadtest.py create dataversetable -t <AAD tenant> -i <AAD Client ID> -p <AAD Client secret> -o "orgcd1abe55" -s "cr876_" -n <Table Name>
 ```
 
 This will create a table named `<Table Name>` in Dataverse.
 
 ## Fill the table with data
 Replace the placeholders below with your data to fill the previously created table with data. If you run the subsequent command, 10 rows will be added containing dummy data.
-```
-python dataverse_loadtest.py fill -t <AAD tenant> -i <AAD Client ID> -p <AAD Client secret> -o "orgcd1abe55" -s "cr876_" -n <Table Name> --assignee_email "youremail@yourorg.com" --no_of_entries 10
+```console
+user@com:~$ python dataverse_loadtest.py fill -t <AAD tenant> -i <AAD Client ID> -p <AAD Client secret> -o "orgcd1abe55" -s "cr876_" -n <Table Name> --assignee_email "youremail@yourorg.com" --no_of_entries 10
 ```
